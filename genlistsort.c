@@ -13,15 +13,10 @@
 #include "genlistsort.h"
 #include "string.h"
 
-/* possible scenarios:
- * 1) cur node replaces root
- * 2) cur node goes to the left
- * 3) cur node goes to the right
- */
 void
 add_node(gen_tree_node_t *n, gen_tree_node_t *t, int (*cmp_func)())
 {
-    gen_tree_node_t *c, tmp;
+    gen_tree_node_t *c;
 
     while (1)
         {
@@ -163,7 +158,7 @@ sort_gen_list(void *list, void (*cmp_func))
 /* Example of using the sort.
  * Just uncomment everything below, compile and run.
  * It is fully operation and also tests the sort
- */
+ *
 int
 compare_nodes_by_size(tdp *d1, tdp *d2)
 {
